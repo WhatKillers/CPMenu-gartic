@@ -81,7 +81,7 @@ function menuns() {
              if (!document.querySelector("#afk")){
 // tr: burası ayararı ayarladığımız kısım yani menünün içinde bulunan buttonlar // en: this is the part where we set the settings, that is the buttons inside the menu
 $('#modmenupopUp .content .contentPopup.info').append('<h5 style="color:black;">'+langlist.translator+": "+langlist.translator_by+'</h5>');
-$('#modmenupopUp .content .contentPopup.info').append('<label class="select lang"><select name="language"><optgroup label="Languages"><option value="23">Portugues</option><option value="2">English</option><option value="999">Custom</option></optgroup></select></label>');
+$('#modmenupopUp .content .contentPopup.info').append('<label class="select lang"><select name="language"><optgroup label="Languages"><option value="23">Portugues</option><option value="2">English</option></optgroup></select></label>');
 $('.select.lang').on('change', 'select[name="language"]', function() { lang =document.querySelector('.select.lang select').value; loadwoldlist();});
 $('#modmenupopUp .content .contentPopup.info').append('<label class="text" style="width: 100%; height: 40px;"><input class="woldurl" type="text" placeholder="URL (.json)" value=""></label>');
 $('.contentPopup.info .text').on('change', '.woldurl', function() { customurl = document.querySelector('.woldurl').value; loadwoldlist();});
@@ -538,7 +538,7 @@ $('.content').on('click', '.ic-okeys', function() {  $('#popUp').css({"display":
  }
 
  function loadwoldlist() { // tr: burası github sayfamdan kelime listesini yüklediğimiz yer eski sürümlerde buradan yüklemiyorduk // en: this is where we loaded the wordlist from my github page we didn't load it from here in older versions
-     let listtext = "https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/en.json";
+     let listtext = "https://raw.githubusercontent.com/WhatKillers/CPMenu-gartic/master/languages/pt.json";
      if (lang==999){
      if(customurl){
           $.getJSON(customurl, function(data) {
@@ -546,14 +546,10 @@ $('.content').on('click', '.ic-okeys', function() {  $('#popUp').css({"display":
          console.log(`%c %cCustom wordlist loaded %c %c url: ${customurl} %c `, "background: #005900; padding:8px 2px;", "color: whitle; background: black; padding:5px 5px;", "background: #005900; padding:8px 2px;", "color:whitle; background: green; padding:5px 5px;",  "background: #005900; padding:8px 2px;");
                 }).fail(function(jqXHR, textStatus, errorThrown) { customurl=null; sendpopup("Error",`Encountered a problem loading the word list\nerror description: ${textStatus}`, "https://i.imgur.com/JQGPXAb.gif"); console.log(`%c %cEncountered a problem loading the word list %c %c error description: ${textStatus} %c `,  "background: #910000; padding:8px 2px;", "color: whitle; background: black; padding:5px 5px;", "background: #910000; padding:8px 2px;", "color:whitle; background: red; padding:5px 5px;",  "background: #910000; padding:8px 2px;"); });}
      }else{
-     if (lang==8){
-             listtext = "https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/tr.json";
-         }else if (lang==23){
-             listtext = "https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/az.json";
-         }else if (lang==19){
-             listtext = "https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/ar.json";
-         }else{
-             listtext = "https://raw.githubusercontent.com/anonimbiri/gartic.io-hack/main/world_list/en.json";
+     if (lang==23){
+             listtext = "https://raw.githubusercontent.com/WhatKillers/CPMenu-gartic/master/languages/pt.json";
+         }else if (lang==2){
+             listtext = "https://raw.githubusercontent.com/WhatKillers/CPMenu-gartic/master/languages/en.json";
          }
        $.getJSON(listtext, function(data) {
     console.log(`%c %cLoad worldlist %c %c url: ${listtext} %c `,  "background: #005900; padding:8px 2px;", "color: whitle; background: black; padding:5px 5px;", "background: #005900; padding:8px 2px;", "color:whitle; background: green; padding:5px 5px;",  "background: #005900; padding:8px 2px;");
