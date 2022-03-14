@@ -470,7 +470,7 @@ $('#kemlimelistesi').css({"display": "none"});}else{ $(".pin.worldlist img").att
  $('#popUp').css({"display": "block"});
  $('#popUp').append('<div id="modmenupopUp"></div>');
  $('#modmenupopUp').append('<div class="content" style="position: absolute;"><button class="close"></button><div class="title"><h3>CPMenu v1.0.0</h3></div><div class="contentPopup info"></div></div>');
-     $('#modmenupopUp .content').append('<a onclick="parent.open(\'https://github.com/anonimbiri/gartic.io-hack\');" style="cursor: pointer;position:relative;top:70px;width:290px;background-color: rgba(64, 120, 192);" class="loginGoogle"><img src="https://i.imgur.com/HVXUQfZ.png" style="position:relative;left:15px;width:25px;height:25px;"><span>'+ langlist.Github_source_code +'</span></a>');
+     $('#modmenupopUp .content').append('<a onclick="parent.open(\'https://github.com/anonimbiri/gartic.io-hack\');" style="cursor: pointer;position:relative;top:70px;width:290px;background-color: rgba(64, 120, 192);" class="loginGoogle"><span></span></a>');
          setTimeout(function() {
          if(!document.querySelector('#modmenupopUp .content div #afk'))
                  {
@@ -593,7 +593,7 @@ $('#alphabet').remove();
     kelime.appendChild(div)
     const div2 = document.createElement("div")
     div2.setAttribute("id", "hintknownbuttons");
-    div2.innerHTML = "<h5 style=\"margin-top: 10px; font-size: 100%; text-align: center; color: green; border-radius: 8px;\" <h5> Tested words</h5>";
+    div2.innerHTML = "<h5 style=\"margin-top: 10px; font-size: 100%; text-align: center; color: green; border-radius: 8px;\" <h5>Palavras Indicadas</h5>";
     kelime.appendChild(div2)
    if (document.querySelector('.word')){
     var InputText1 = $('.word:eq(0)').html()
